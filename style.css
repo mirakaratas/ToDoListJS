@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+  }
+  /* Liste stili */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Liste öğeleri */
+li {
+    display: flex; /* Esnek kutu düzeni */
+    align-items: center; /* Dikey olarak ortala */
+    padding: 12px 30px; /* Sağ ve sol iç boşluk */
+    background: #eee;
+    font-size: 18px;
+    position: relative; /* Kapatma butonunun konumunu ayarlamak için */
+    margin: 5px 0; /* Üst ve alt boşluk */
+    transition: 0.2s; /* Geçiş efekti */
+    cursor: pointer;
+}
+
+/* Liste öğelerinin arka plan rengini düzenleme */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Fare ile üzerine gelindiğinde liste öğesinin arka plan rengini değiştirme */
+ul li:hover {
+    background: #ddd;
+}
+
+/* Liste öğeleri seçildiğinde (işaretlendiğinde) stil verme */
+ul li.checked {
+    background: #276678;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+/* Seçili öğe için işaret (checkmark) stili */
+ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/* Kapatma butonu stili */
+.remove-btn {
+    display: none; 
+    position: absolute; 
+    right: 10px; /* Sağ kenardan 10px uzaklıkta */
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Kapatma butonunu sadece liste öğesi üzerine gelindiğinde görünür yap */
+li:hover .remove-btn {
+    display: block;
+}
+
+/* Toast mesajının gizlenmesi */
+.toast.hide {
+    display: none;
+}
+
+/* Genel stil ayarları */
+.header {
+    background-color: #f78501;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+img {
+    background-color: white;
+}
+
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+}
+
+.button {
+    padding: 10px;
+    width: 25%;
+    background: #d9d9d9;
+    color: #555;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+
+.button:hover {
+    background-color: #bbb;
+}
+.kutu{
+    width: 1112px;
+    margin-left: 212px;
+}
+
+ul li.checked {
+    background: #276678; 
+    color: #fff;
+    text-decoration: line-through; 
+}
+
+
+ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%) rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
